@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronômetro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aqua;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        h1{background-image: linear-gradient(red,red,red,black,red,red);
+        background-clip: text;
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent;
+        font-weight: bold;
+        line-height: 1.1;}
+        h1{font-size: 100px;}
+        #tempo {
+            font-size: 4em;
+            color: red;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: black;
+            color: #fff;
+            border: none;
+            padding: 30px 25px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cronômetro</h1>
+        <div id="tempo">00 : 00 : 00</div>
+        <button onclick="start()">Iniciar</button>
+        <button onclick="stop()">Parar</button>
+        <button onclick="location.reload()">Resetar</button>
+    </div>
+    <script>
+        var seg = 0;
+        var min = 0;
+        var hor = 0;
+        var id;
+        function start() {
+            id = setInterval(function() {
+                seg++;
+                if(seg == 59) {
+                    seg = 0;
+                    min++;
+                }
+                if (min == 59) {
+                    min = 0;
+                    hor++;
+                }
+                document.getElementById("tempo").innerHTML = 
+                    (hor < 10 ? "0" + hor : hor) + " : " + 
+                    (min < 10 ? "0" + min : min) + " : " + 
+                    (seg < 10 ? "0" + seg : seg);
+            },1000);
+        }
+        function stop() {
+            clearInterval(id);
+        }
+    </script>
+</body>
+</html>
