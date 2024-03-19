@@ -1,0 +1,219 @@
+
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #000000, #8B0000);
+    color: #fff;
+}
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+main {
+    padding: 20px;
+}
+section {
+    margin-bottom: 20px;
+}
+section h2 {
+    color: grey; /* Cor do título */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+footer {
+    background: linear-gradient(to right,black, red, black);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+img {
+    border: 2px solid red; 
+}
+.imagem-container {
+    display: flex;
+    justify-content: space-between; /* Distribui o espaço entre as imagens */
+    margin-top: 20px; 
+}
+.imagem-container img {
+    margin-right: px; /* Espaçamento entre as imagens */
+}
+header a:hover {
+    background-color: red;
+}
+h1 {
+  color: red;
+  font-family: 'Cinzel', serif;
+  font-size: 45px;
+}
+h2{font-family:'Arial Narrow Bold', sans-serif;}
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.caixa-texto {
+    background-color: black; 
+    padding: 20px; 
+    border-radius: 5px; 
+}
+.caixa-texto p {
+    margin: 0; 
+}
+.icone-voltar {
+    position: absolute; 
+    top: 15px; 
+    left: 50px; 
+    z-index: 999; 
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.icone-voltar:hover img {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone em 10% */
+}
+.icone-texto {
+    display: none; /* Inicialmente oculta o texto */
+    position: absolute; /* Define a posição absoluta em relação ao ícone */
+    top: -20px; /* Define a distância do topo do ícone */
+    left: 50%; /* Define a distância da esquerda do ícone */
+    transform: translateX(-50%); /* Centraliza horizontalmente em relação ao ícone */
+    background-color: black; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 5px; /* Espaçamento interno */
+    border-radius: 5px; /* Borda arredondada */
+    font-size: 12px; /* Tamanho da fonte */
+    white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
+}
+.icone-voltar:hover .icone-texto {
+    display: block; /* Exibe o texto quando o mouse está sobre o ícone */
+}
+.produto {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+}
+.produto img {
+    max-width: 100%;
+    height: auto;
+}
+.produto h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+.produto p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+.produto button {
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: gray;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button {
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: gray;
+    color: #fff;
+    font-size: 30px;
+}
+button:hover {
+    background-color: red; /* Altere para a cor desejada */
+}
+section img {
+    max-width: 100%;
+    height: auto;
+}
+.produto img {
+    max-width: 100%;
+    height: auto;
+}
+.produtos-background {
+    background: linear-gradient(to bottom, red,black,red,black); /* Degradê de preto para vermelho */
+    padding: 20px; /* Adiciona um espaçamento interno */
+}
+.preco-texto, .preco {
+    color: yellow;
+    font-size: 18px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.texto-lateral {
+    width: calc(50% - 20px); /* 50% menos o espaçamento */
+    padding: 0 10px;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+.imagem-lateral {
+    width: calc(50% - 20px); /* 50% menos o espaçamento */
+    padding: 0 10px;
+    margin-bottom: 20px;
+}
+.imagem-central {
+    text-align: center; /* Alinha a imagem no centro */
+    margin-bottom: 20px; /* Adiciona um espaço na parte inferior */
+    max-width: 100%;
+}
+.texto-inferior {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 100%;
+}
+label{font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;}
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select {
+    width: 250px;
+    margin-bottom: -30px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 8px solid black; /* Adiciona uma borda preta */
+    padding: 20px; /* Adiciona um espaçamento interno */
+    border-radius: 10px; /* Borda arredondada */
+    width: 400px; /* Ajuste conforme necessário */
+    background: linear-gradient(to bottom, red, black); /* Degrade vermelho */
+}
+h3{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+
+    
+
+
+

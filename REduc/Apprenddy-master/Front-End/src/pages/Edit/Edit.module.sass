@@ -1,0 +1,85 @@
+@import '../../App.sass'
+
+.customGrid
+  grid-template-columns: 100%
+  grid-gap: 0
+
+.gridHalf
+  grid-template-columns: minmax(auto, 20%) 1fr
+  grid-gap: 0
+
+.section
+  padding-top: 0
+
+.header
+  position: sticky
+  top: 70px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  margin-bottom: 30px
+  padding-top: 32px
+  padding-bottom: 20px
+  z-index: 99
+  background-color: $greyL3
+  border-bottom: 3px solid $greyL2
+
+  .title
+    font-size: $headingSize4
+
+  .resourcesTitle
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+    .title
+      margin-right: 30px
+      margin-bottom: 0
+
+.form
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-rows: repeat(autofit, auto)
+  grid-gap: 30px
+
+  .reactSelect
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    width: 100%
+
+    label
+      font-size: $headingSize6
+      font-family: $titleFont
+      font-weight: 700
+      color: $dark
+
+    .reactSelectContainer
+      margin-top: 5px
+      height: 60px
+      width: 100%
+      z-index: 9
+
+  .fullLine, .editorContainer
+    grid-column-start: 1
+    grid-column-end: 3
+
+  .editorContainer
+    .label
+      font-size: $headingSize6
+      font-family: $titleFont
+      font-weight: 700
+      color: $dark
+
+  .selectField
+    background-color: $light
+
+  .input, .select
+    height: 60px
+    background-color: $light
+
+  .selectMult
+    height: 100%
+    background-color: $light
+    padding: 10px
+    text-transform: capitalize

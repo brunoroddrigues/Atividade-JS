@@ -1,0 +1,48 @@
+@import '../../App.sass'
+
+.content
+  align-self: flex-start
+
+.searchGrid
+  grid-template-columns: minmax(auto, 20%) 1fr
+  grid-gap: 0
+
+.filters
+  align-self: flex-start
+  position: sticky
+  top: 70px
+  background-color: $light
+  height: calc(100vh - 70px)
+  overflow-y: auto
+
+  .filterGroup
+    margin-bottom: 50px
+
+    &:last-of-type
+      margin-bottom: 0
+
+    .title
+      font-size: $headingSize5
+      padding: 0 10px
+
+    .link
+      display: block
+      width: 100%
+      color: $dark
+      padding: 10px 10px
+
+    .divider
+      width: 100%
+      height: 1px
+      background-color: $greyL3
+
+.pageTitle
+  font-size: $headingSize2
+  margin-bottom: 2rem
+
+.gridAuto
+  grid-auto-rows: 1fr
+
+  @media only screen and (min-width: 1280px)
+    grid-template-columns: repeat(3, minmax(250px, 1fr))
+

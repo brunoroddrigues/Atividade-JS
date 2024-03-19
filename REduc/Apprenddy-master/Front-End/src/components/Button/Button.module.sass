@@ -1,0 +1,77 @@
+@import '../../App.sass'
+
+.button
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: $primary
+  color: $light
+  height: 36px
+  border: 0
+  border-radius: 10px
+  padding: 0 20px
+  margin-right: 10px
+  cursor: pointer
+  text-transform: uppercase
+  font-size: 12px
+  font-weight: 500
+  will-change: background-color
+  transition: $defaultTransition
+
+  &:last-child
+    margin-right: 0
+
+  &:hover
+    background-color: darken($primary, 10%)
+
+  .icon
+    font-size: 16px
+    margin-right: 10px
+
+    &.noMargin
+      margin-right: 0
+
+  &.large
+    height: 40px
+    padding: 0 22px
+    font-size: 14px
+
+    .icon
+      font-size: 18px
+
+  &.error
+    background-color: $error
+
+    &:hover
+      background-color: darken($error, 10%)
+
+  &.outline
+    height: 36px
+    background-color: transparent
+    border: 2px solid $primary
+    color: $primary
+
+    &:hover
+      background-color: transparentize($primary, .8)
+
+  &.contrast
+    background-color: $contrast
+
+    &:hover
+      background-color: darken($contrast, 10%)
+
+  &.transparent
+    background-color: transparentize($primary, .9)
+    color: $primary
+
+    &:hover
+      background-color: transparentize($primary, .8)
+
+  &:disabled, &.disabled
+    background-color: $greyL3
+    color: $grey
+    pointer-events: none
+
+    &:hover
+      background-color: $greyL3
+      color: $grey
